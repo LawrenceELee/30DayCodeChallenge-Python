@@ -25,6 +25,7 @@ swap(in1, in2)
 #what are the values? are they still swapped? is this expected behavior?
 print("RETURNING from calling/invoking swap function, do in1 and in2 stay swapped after returning from the swap function?")
 print(f"in1: {in1}, in2: {in2}\n")
+# we can use the 'global' keyword to make the scope of the variable global when we declare the variable, instead of local/lexical scope
 
 #example2
 in1 = "apple"
