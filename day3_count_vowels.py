@@ -27,4 +27,10 @@ Things to think about:
 -> having that long if statement to check is kind of ugly
 -> what if we want to add 'y' as a vowel, in the future
 -> what are some other ways to solve this problem? If you are using Python 3.10, then we can use case/switch?
+
+-> what "container" should we use to hold the vowels? array/list? dict/hashmap? set?
+I was wondering what the time complexity of the "in" keyword is. If you are also curious:
+    * https://stackoverflow.com/questions/20234935/python-in-operator-speed
+    * https://wiki.python.org/moin/TimeComplexity
+so changing vowels from a string of characters to a set might be better for large inputs. 
 '''
