@@ -28,6 +28,14 @@ def min_max_sort(input_list):
 def min_max_builtin(input_list):
     return min(input_list), max(input_list)
 
+# using min and max heaps to keep track of the min and max
+def min_max_priority_queues(input_list):
+    max_heap = []
+    min_heap = []
+    for curr_num in input_list:
+        heapq.heappush(max_heap, -curr_num)
+        heapq.heappush(min_heap, curr_num)
+
 # I am assuming the input array is valid and only contains ints
 input1 = [1,2,3,4,5]
 input2 = [1,2,3,4,5,6,7,8,9,10]
