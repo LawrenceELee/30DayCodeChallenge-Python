@@ -24,6 +24,10 @@ def min_max_sort(input_list):
     input_list.sort()
     return input_list[0], input_list[-1]
 
+# using the python built-in min() and max() functions
+def min_max_builtin(input_list):
+    return min(input_list), max(input_list)
+
 # I am assuming the input array is valid and only contains ints
 input1 = [1,2,3,4,5]
 input2 = [1,2,3,4,5,6,7,8,9,10]
@@ -32,12 +36,16 @@ input4 = [10,9,8,7,6,5,4,3,2,1,0,-1,-2,-3,-4,-5]
 
 print(f"\nmin and max (iterative algorithm): {min_max_iterative(input1)}")
 print(f"min and max (sort algorithm): {min_max_iterative(input1)}")
+print(f"min and max (built-in algorithm): {min_max_iterative(input1)}")
 
 print(f"\nmin and max (iterative algorithm): {min_max_iterative(input2)}")
 print(f"min and max (sort algorithm): {min_max_iterative(input2)}")
+print(f"min and max (built-in algorithm): {min_max_iterative(input2)}")
 
 print(f"\nmin and max (iterative algorithm): {min_max_iterative(input3)}")
 print(f"min and max (sort algorithm): {min_max_iterative(input3)}")
+print(f"min and max (built-in algorithm): {min_max_iterative(input3)}")
 
 print(f"\nmin and max (iterative algorithm): {min_max_iterative(input4)}")
 print(f"min and max (sort algorithm): {min_max_iterative(input4)}")
+print(f"min and max (built-in algorithm): {min_max_iterative(input4)}")
