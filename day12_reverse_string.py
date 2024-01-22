@@ -11,13 +11,17 @@ Ideas:
     b. we also don't know the time and space complexities of this built-in function, unless we look at the source code
 2. iterative approach: use a loop to traverse the string from the end to the beginning
     a. we can either swap in-place or use a extra temporary array
-3. recursive approach: 
+3. recursive approach: we recursively call reverse function until end of string then we concatenate the previous char to end
+    a. this is least efficient because we are creating a new string for each recursive call
+    b. this is to demonstrate that it can be done recursively, but it is not the best approach
 '''
 
+# built-in reverse() function
 def reverse_builtin(input_str):
     # convert string to array/list, reverse the list, then convert back to string
     return ''.join(reversed(list(input_str)))
 
+#iterative approach with in-place swap
 def reverse_iterative(input_str):
     # convert string to array/list
     input_list = list(input_str)
@@ -37,6 +41,7 @@ def reverse_iterative(input_str):
     # convert list back to string
     return ''.join(input_list)
 
+# recursive approach
 def reverse_recursive(input_str):
     # base case
     if len(input_str) == 0:
