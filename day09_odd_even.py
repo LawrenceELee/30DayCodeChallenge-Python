@@ -20,7 +20,7 @@ from random import randint
 # even numbers are divisible by 2, with remainder 0
 # odd numbers are not divisible by 2, they have a remainder 1
 def odd_or_even(num):
-    if num % 2 == 0:
+    if (num % 2) == 0:
         return "even"
     else:
         return "odd"
