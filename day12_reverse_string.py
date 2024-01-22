@@ -26,7 +26,7 @@ def reverse_iterative(input_str):
     start = 0
     end = len(input_list) - 1
 
-    # swap elements at start and end pointers
+    # swap elements in-place at start and end pointers, we don't use extra temp array/list
     while start < end:
         input_list[start], input_list[end] = input_list[end], input_list[start]
 
