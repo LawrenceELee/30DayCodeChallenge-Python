@@ -43,7 +43,12 @@ def shuffle_list(input_list):
 
     return input_list
 
-sorted_list = [i for i in range(-10, 11)]
-print(f"sorted_list  : \t{sorted_list}")
-print(f"shuffle_built: \t{shuffle_builtin(sorted_list)}")
-print(f"shuffle_list : \t{shuffle_list(sorted_list)}")
+sorted_list_nums = [i for i in range(-10, 11)]
+print(f"sorted_list  : \t{sorted_list_nums}")
+print(f"shuffle_built: \t{shuffle_builtin(sorted_list_nums)}")
+print(f"shuffle_list : \t{shuffle_list(sorted_list_nums)}")
+
+sorted_list_letters = [chr(i) for i in range(ord('a'), ord('z')+1)]
+print(f"sorted_list  : \t{sorted_list_letters}")
+print(f"shuffle_built: \t{shuffle_builtin(sorted_list_letters)}")
+print(f"shuffle_list : \t{shuffle_list(sorted_list_letters)}")
