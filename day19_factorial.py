@@ -14,10 +14,9 @@ sys.setrecursionlimit(10**6)
 def factorial_iterative(n):
     if n < 0:
         raise ValueError("n must be non-negative")
-    
     if n == 0:
         return 1
-    
+
     result = 1
     for i in range(1, n+1):
         result *= i
@@ -27,7 +26,6 @@ def factorial_iterative(n):
 def factorial_recursive(n):
     if n < 0:
         raise ValueError("n must be non-negative")
-    
     if n == 0:
         return 1
     
