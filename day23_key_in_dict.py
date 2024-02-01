@@ -23,6 +23,10 @@ def check_key_using_keys_function(my_dict, key):
     # if we iterate through all the keys and we don't find the key, then the key doesn't exist
     return False
 
+'''
+We can't use the square bracket syntax to check if a key exists in a dictionary, b/c if the key doesn't exist, it will throw a KeyError
+For example: my_dict['z'] will throw a KeyError and crash the program if 'z' doesn't exist in my_dict
+'''
 
 my_dict = {'a': 1, 'b': 2, 'c': 3, 'd': 4}
 print(f"my_dict: {my_dict}")
