@@ -15,6 +15,7 @@ Ideas/Approach/Algorithm:
 4. use recursion - this is the most inefficient way, but it is a good exercise to practice recursion
 '''
 
+# define a function to check for even-ness which will be used in multiple places later
 def is_even(n):
     return n % 2 == 0
 
