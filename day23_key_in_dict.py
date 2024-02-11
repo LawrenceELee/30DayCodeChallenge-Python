@@ -26,6 +26,17 @@ def check_key_using_keys_function(my_dict, key):
 '''
 We can't use the square bracket syntax to check if a key exists in a dictionary, b/c if the key doesn't exist, it will throw a KeyError
 For example: my_dict['z'] will throw a KeyError and crash the program if 'z' doesn't exist in my_dict
+This might work, but you have to surround it with a try-except block to catch the KeyError
+'''
+
+'''
+I was curious about the performance of these different methods and I found this article: 
+++ https://www.scaler.com/topics/check-if-key-exists-in-dictionary-python/
+
+Performance Comparison
+++ [] and in operators are the fastest and most efficient way to check if a key exists in dictionary in Python. [] operator, of course, needs to be associated with the try-except block.
+++ get() and setdefault() methods lag behind the [] and in operators, since they also perform attribute/value lookup (along with insertion in case of setdefault()), while the other 2 only perform membership check.
+++ Using the keys() method is the least efficient method to check if key exists in dictionary in Python, since it involves returning the key-set as well as checking whether the key exists in that set. This entire operation is linear in time, while the ones discussed above are constant in time.
 '''
 
 my_dict = {'a': 1, 'b': 2, 'c': 3, 'd': 4}
