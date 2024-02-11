@@ -130,8 +130,8 @@ def measure_performance():
     average_time_sample = execution_time_sample / NUMBER_OF_RUNS
     execution_time_numpy = round(timeit.timeit(wrapper_shuffle_numpy, number=NUMBER_OF_RUNS), 10)
     average_time_numpy = execution_time_numpy / NUMBER_OF_RUNS
-    execution_time_law = round(timeit.timeit(wrapper_shuffle_fisher_yates, number=NUMBER_OF_RUNS), 10)
-    average_time_law = execution_time_numpy / NUMBER_OF_RUNS
+    execution_time_fisheryates = round(timeit.timeit(wrapper_shuffle_fisher_yates, number=NUMBER_OF_RUNS), 10)
+    average_time_fisheryates = execution_time_numpy / NUMBER_OF_RUNS
 
     print(f"\nPerformances measured on a list of {PREFORMANCE_SAMPLE} items, " \
           f"running code {NUMBER_OF_RUNS} times.\n")
@@ -141,8 +141,8 @@ def measure_performance():
     print(f"Average time per execution: {average_time_sample} seconds\n")
     print(f"Total execution time using numpy.random.shuffle: {execution_time_numpy} seconds")
     print(f"Average time per execution: {average_time_numpy} seconds\n")
-    print(f"Total execution time using law's shuffle: {execution_time_law} seconds")
-    print(f"Average time per execution: {average_time_law} seconds\n")
+    print(f"Total execution time using fisheryates shuffle: {execution_time_fisheryates} seconds")
+    print(f"Average time per execution: {average_time_fisheryates} seconds\n")
 
 if __name__ == "__main__":
     my_list = [random.randint(0, 10) for _ in range(10)]
@@ -154,5 +154,5 @@ if __name__ == "__main__":
     result = shuffle_numpy(my_list)
     print(f"Shuffled with numpy.random.shuffle:\n{result}")
     result = shuffle_list(my_list)
-    print(f"Shuffled with law's shuffle:\n{result}")
+    print(f"Shuffled with fisher-yates shuffle:\n{result}")
     measure_performance()
